@@ -32,3 +32,6 @@ A veces se escucha un zumbido, no importa el GPIO que se utilize. Para soluciona
 
 ## Instrucciones de armado
 Imprimir piezas. Se necesitan 3 colores ...
+
+## Cotización
+Está en el Drive de Invento. El archivo se llama "Cotización Mini Arcade y TV de los Simpsons"
