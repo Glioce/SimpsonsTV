@@ -56,20 +56,68 @@ Parámetros opcionales
 - DSTATISTICS=1 para mostrar información en la pantalla.
 - DGPIO_TFT_BACKLIGHT=16 para controlar la retroiluminación con un GPIO.
 
-Ahora compilar  y  lanzar el ejecutable recién compilado
+Ahora compilar y lanzar el ejecutable recién compilado para probar
 ```bash
 make
 sudo ./fbcp-ili9341
 ```
 
+Lanzar el programa en el arranque  
+Editar `/etc/rc.local`
+```
+# Lanzar programa para la pantalla SPI
+sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &
+```
+
+Para detener programa de la pantallita ejecutar `sudo pkill fbcp`
+
 Aquí hay un video para entender cómo usar el controlador. El diagrama de conexión se tomó del video. No se deben seguir todos los pasos.  
 https://www.youtube.com/watch?v=KciKqGX8g94  
 
+Instalar usbmount (ya viene instalado con RetroPie). Monta memoria USB automáticamente como `/media/usb`
+```
+sudo apt-get install usbmount
+sudo nano /lib/systemd/system/systemd-udevd.service
+PrivateMounts=no
+sudo reboot
+```
 
-Copiar videos. Copiar scripts pyhon. Configurar arranque. Copiar juegos (opcional).  
+Para quitar memoria USB
+```
+sudo umount /media/usb
+```
+
+Copiar videos. Copiar scripts pyhon. Copiar juegos (opcional).  
 
 Este es el repo original https://github.com/buba447/simpsonstv  
 El script de los botones se modificó. Ahora funciona con un push button simple.   
+
+Activar audio por GPIO 18 y 19
+sudo nano /boot/config.txt 
+dtparam=audio=on
+dtoverlay=audremap,enable_jack,pins_18_19
+
+Para deshabilitar audio por GPIO 18 (no es necesario)
+sudo nano /etc/rc.local
+agregar
+raspi-gpio set 18 op dl
+raspi-gpio set 19 op a5 
+raspi-gpio set 8 a2
+raspi-gpio set 7 a2
+
+Desactivar texto de arranque
+sudo /boot/cmdline.txt
+editar
+console=tty3
+
+quitar (no se hizo)
+fsck.repair=yes
+
+agregar al final (no se hizo)
+consoleblank=0 logo.nologo quiet splash
+
+Instalar omxplayer (ya está instalado)
+sudo apt-get install omxplayer
 
 Por hacer:
 - función para cambiar videos y cambiar a modo consola de juegos con botones frontales.
