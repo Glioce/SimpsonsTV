@@ -13,6 +13,11 @@ Cambios realizados
 - Conectores de rasp accesibles desde afuera
 - Emulación de videojuegos con RetroPie
 
+## Instrucciones de armado
+Imprimir piezas. Se necesitan 3 colores ...
+
+![diagrama de conexiones rasp y pantalla](conexiones_pantalla.png)
+
 ## Instrucciones de instalación de software
 
 ### Retropie
@@ -77,9 +82,6 @@ https://www.youtube.com/watch?v=3pXB90IDNoY
 https://learn.adafruit.com/adding-basic-audio-ouput-to-raspberry-pi-zero/pi-zero-pwm-audio  
 
 A veces se escucha un zumbido, no importa el GPIO que se utilize. Para solucionarlo se puede poner un circuito para filtrar, o poner una resistencia en serie con la bocina, esta forma no reduce por completo el zumbido, pero sí se reduce mucho.
-
-## Instrucciones de armado
-Imprimir piezas. Se necesitan 3 colores ...
 
 ## Cotización
 Está en el Drive de Invento. El archivo se llama "Cotización Mini Arcade y TV de los Simpsons"
