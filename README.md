@@ -88,13 +88,14 @@ sudo umount /media/usb
 ```
 
 Copiar videos. Copiar scripts pyhon. Copiar juegos (opcional).  
-Usando el explorador de archivos de Windows  
+**Usando el explorador de archivos de Windows**  
 Primero reiniciar el servicio samba (que ya viene instaldado con Retropie)  
 ```
 sudo service smbd restart
 ```
 Abrir una ventana de explorador y escribir la dirección `\\retropie`  
-Usando ssh
+
+**Usando ssh**
 ```
 ssh pi@retropie
 rasp
@@ -102,6 +103,12 @@ rasp
 En otra ventana
 ```
 scp ./* pi@retropie:/home/pi/simpsonstv/videos/
+```
+
+**Usando memoria USB**  
+Conectar memoria USB y escribir comando
+```
+sudo cp /media/usb/simp/* /home/pi/simpsonstv/videos/
 ```
 
 Este es el repo original https://github.com/buba447/simpsonstv  
