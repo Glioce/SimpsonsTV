@@ -30,8 +30,10 @@ https://www.raspberrypi.org/software/
 Conectar a red wifi y activar ssh.
 
 Opcional Kodi y gamepad  
-Se intentó instalar Kodi dentro de RetroPie, pero la instalación falla. Al parecer intenta descargar archivos que ya no están en línea. Posiblemente se solucione cuando se publique una actualización.  
-Si un día se puede instalar, este video puede ser útil  
+
+La primera instalación de Kodi falló, al parecer intentaba descargar archivos que ya no están en línea.
+Para poder instalar se actualizó el script de setup.  
+Este video puede ser útil  
 https://www.youtube.com/watch?v=bR6NMkgRYuU
 
 Configuración inicial de RetroPie (gamepad)
